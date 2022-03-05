@@ -5,9 +5,25 @@ public class LoginSystem {
     private static Scanner sc;
     
 
+    public static void createuser(String username, String password, String filepath){
+        try{
+            sc=new Scanner(System.in);
+            FileWriter fw = new FileWriter("credentials.dat",true);
+            PrintWriter pw = new PrintWriter(fw);
+            System.out.println("Please enter the disired username: ");
+            username = sc.nextLine();
+            System.out.println("Please enter the disired Password: ");
+            password = sc.nextLine();
+            pw.println(username+","+password);
+            pw.close();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
     
-    
-public static void verifyLogin(String username, String password, String filepath){
+    public static void verifyLogin(String username, String password, String filepath){
    
         boolean found = false;
         String tempUsername = "";
@@ -24,17 +40,17 @@ public static void verifyLogin(String username, String password, String filepath
 
                 if(tempUsername.trim().equals(username.trim())&&tempPassword.trim().equals(password.trim())) {
                     found = true;
+                    System.out.println("correct");
                 }
+                else
+                {
+                    System.out.println("file doesnt exist in our system try again");
             }
             sc.close();
-            System.out.println("Correct");
-
+            
         }
-        catch(Exception e){
-            System.out.println("Error either the username or password is incorrect");
         }
-    
-        
+        catch(Exception e){}        
 }
   
 
@@ -45,7 +61,8 @@ public static void verifyLogin(String username, String password, String filepath
      System.out.println("Please Enter your password: ");
      String password=sc.nextLine();
      String filepath = "credentials.dat";
-     verifyLogin(username,password,filepath);
+     createuser(username,password,filepath);
+     
     
 }
 }
