@@ -47,13 +47,15 @@ public class LoginSystem {
        System.out.println("Please Enter your password again: ");
        temppassword=sc.nextInt();
         do {
-            System.out.println("Passwords don't match. Please Enter your new password again");
+            System.out.println("Passwords don't match. Please Enter your password again");
             temppassword=sc.nextInt();
+
         } while(temppassword!=password);
 
         System.out.println("Entry successful!, Your info has been saved in our system");
         
        credentials.add(new Credentials(password,username));
+       saveCredsToFile(credentials);
    }
 
 
