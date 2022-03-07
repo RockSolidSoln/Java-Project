@@ -4,7 +4,7 @@ import java.nio.file.*;
 
 
 public class LoginSystem {
-
+    private static Scanner sc;
     public static void main(String[] args)throws IOException{
         
           ArrayList<Credentials> credentials=readCredsFromFile();
@@ -15,8 +15,6 @@ public class LoginSystem {
           }     
    }
 
-    private static Scanner sc;
-    
    private static ArrayList<Credentials> readCredsFromFile() throws IOException {
        ArrayList<Credentials> credentials = new ArrayList<>();
 
