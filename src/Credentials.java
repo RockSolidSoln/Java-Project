@@ -1,8 +1,8 @@
 public class Credentials {
-        private int password;
+        private String password;
         private String username;
         public Credentials() {}
-        public Credentials(String username , int password) {
+        public Credentials(String username , String password) {
             this.password = password;
             this.username = username;
         }
