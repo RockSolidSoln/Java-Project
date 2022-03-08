@@ -2,14 +2,14 @@ public class Credentials {
         private int password;
         private String username;
         public Credentials() {}
-        public Credentials(int password,String username) {
+        public Credentials(String username , int password) {
             this.password = password;
             this.username = username;
         }
         public String toString() {
-            return password + " " + username;
+            return username + " " + password;
         }
         public String toCSVString(){
-            return password + "," + username;
+            return username+ "," + password;
         }
 }

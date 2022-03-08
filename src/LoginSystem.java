@@ -19,8 +19,8 @@ public class LoginSystem {
        List<String> lines = Files.readAllLines(Paths.get("src/credentials.csv"));
        for (int i = 0; i< lines.size();i++) {
            String[] items = lines.get(i).split(",");
-           int password = Integer.parseInt(items[0]);
-           credentials.add (new Credentials(password,items[1]));
+           String username = items[0];
+           credentials.add (new Credentials(username,Integer.parseInt(items[1])));
 
        }
        return credentials;
@@ -46,15 +46,17 @@ public class LoginSystem {
        int password = sc.nextInt();
        System.out.println("Please Enter your password again: ");
        temppassword=sc.nextInt();
+       if (temppassword!=password){
         do {
             System.out.println("Passwords don't match. Please Enter your password again");
             temppassword=sc.nextInt();
 
         } while(temppassword!=password);
-
+       }
+    
         System.out.println("Entry successful!, Your info has been saved in our system");
         
-       credentials.add(new Credentials(password,username));
+       credentials.add(new Credentials(username,password));
        saveCredsToFile(credentials);
    }
 
