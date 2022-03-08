@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "OOPDS_7db6ff67"
+        },
+        {
+            "type": "java",
             "name": "Launch LoginSystem",
             "request": "launch",
             "mainClass": "LoginSystem",
