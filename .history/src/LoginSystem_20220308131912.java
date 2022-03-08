@@ -46,7 +46,7 @@ public class LoginSystem {
        for (int i =0; i<credentials.size();i++){
            System.out.println(credentials.get(i));
 
-           if(credentials.get(i).equals("ahmad 1151")) {
+           if(credentials.contains("ahmad 1151")) {
                System.out.println("okkk lesgoo");
            }
        }

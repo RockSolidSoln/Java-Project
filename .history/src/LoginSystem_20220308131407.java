@@ -19,7 +19,7 @@ public class LoginSystem {
        for (int i = 0; i< lines.size();i++) {
            String[] items = lines.get(i).split(",");
            String username = items[0];
-           credentials.add(username+" "+items[1]);
+           credentials.add (new Credentials(username,items[1]));
        }
        return credentials;
    }
@@ -45,8 +45,7 @@ public class LoginSystem {
        
        for (int i =0; i<credentials.size();i++){
            System.out.println(credentials.get(i));
-
-           if(credentials.get(i).equals("ahmad 1151")) {
+           if(credentials.contains(a)) {
                System.out.println("okkk lesgoo");
            }
        }
@@ -59,7 +58,7 @@ public class LoginSystem {
    //This method creates a new username and sign them up in the system and will be saved to credentials .csv
    private static void createNewUsers() throws IOException {
        String  temppassword;
-       ArrayList<String> credentials=readCredsFromFile();
+       ArrayList<Credentials> credentials=readCredsFromFile();
        sc = new Scanner(System.in);
        System.out.println("Please Enter your new Username: ");
        String username = sc.nextLine();
@@ -77,8 +76,8 @@ public class LoginSystem {
     
         System.out.println("Entry successful!, Your info has been saved in our system");
         
-    //    credentials.add(new Credentials(username,password));
-    //    saveCredsToFile(credentials);
+       credentials.add(new Credentials(username,password));
+       saveCredsToFile(credentials);
    }
 
 
