@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
-public class Main {
+public class start {
    private static Scanner sc = new Scanner(System.in);
   public static void main(String[] args) throws IOException{
     Welcomemenu();
@@ -14,9 +14,9 @@ public class Main {
         +"\n|           To procced please choose an option below         |"
         +"\n|------------------------------------------------------------|"
         +"\n|1-Procced to Register a new user                            |"
-        +"\n|1-Procced as a Donor:                                       |"
-        +"\n|2-Procced as a Non-Goverment Organization:                  |"
-        +"\n|3-Procced as a Distribution Center                          |"
+        +"\n|2-Procced as a Donor:                                       |"
+        +"\n|3-Procced as a Non-Goverment Organization:                  |"
+        +"\n|4-Procced as a Distribution Center                          |"
         +"\n|0-To Exit                                                   |"
         +"\n|------------------------------------------------------------|";
         System.out.println(menu);
@@ -29,14 +29,11 @@ public class Main {
                 break;
             case(2):
                 LoginSystem.authenticateUser(1);
-                System.out.println("here is method for 1");
                 break;
             case(3):
                 LoginSystem.authenticateUser(2);
-                System.out.println("here is method for 2");
                 break;   
             case(4):
-                System.out.println("here is method for 3");
                 break;
             case(0):
                 System.out.println("Have a nice Day! ^-^");
