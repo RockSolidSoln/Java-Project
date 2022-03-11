@@ -6,7 +6,7 @@ public class Ngo {
     private int quantity;
 
     public Ngo() {};
-    public Ngo(String name, int q) {
+    public ngo(String name, int q) {
         this.aids = name;
         this.quantity = q;
     }

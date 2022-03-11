@@ -1,8 +1,7 @@
 import java.util.*;
-import java.io.IOException;
 
 public class ngoMenu {
-    public static void welcomeNgo(String name) throws IOException {
+    public static void welcomeNgo(String name){
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,12 +19,12 @@ public class ngoMenu {
         switch (choice) {
             case (1):   System.out.println("Enter name of the aid");
                         String amount=sc.nextLine();
-                        System.out.println("Enter the number of quantity");
-                        int qty=sc.nextInt();
+                System.out.println("Enter the number of quantity");
+            int qty=sc.nextInt();
     
-                        Ngo set = new Ngo(amount, qty);
+            Ngo set = new Ngo(amount, qty);
     
-                        set.saveNgoDemands();
+            set.saveNgoDemands();
     
                         break;
             case (2):   break;

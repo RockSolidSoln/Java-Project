@@ -1,8 +1,7 @@
 import java.util.*;
-import java.io.IOException;
 
 public class ngoMenu {
-    public static void welcomeNgo(String name) throws IOException {
+    public static void welcomeNgo(String name) throws {
 
         Scanner sc = new Scanner(System.in);
 

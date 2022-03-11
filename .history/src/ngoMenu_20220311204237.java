@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.IOException;
 
 public class ngoMenu {
     public static void welcomeNgo(String name) throws IOException {
