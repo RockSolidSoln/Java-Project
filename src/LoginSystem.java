@@ -57,7 +57,7 @@ public class LoginSystem {
                     
     }
     //------------------------------------------------------------------------------------
-   
+
     //------------------creates a new usernamein the system------------------------------
     public static void createNewUsers(int flag) throws IOException {
     
@@ -70,11 +70,11 @@ public class LoginSystem {
     String temppassword=sc.nextLine();
 
     do{ 
-        if (temppassword.equals(password)){
+        if (temppassword.equals(password)){             // if the temppassword matches the password  will  procced to save credentials to the file
             break;
         }
         else{
-            System.out.println("Passwords don't match. Please Enter your password again");
+            System.out.println("Passwords don't match. Please Enter your password again");  // will keep looping until both passwords match 
             temppassword=sc.nextLine();
         }
     }while(temppassword!=password);
