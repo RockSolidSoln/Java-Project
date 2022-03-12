@@ -19,7 +19,7 @@ public class Ngo {
 
     public void saveNgoDemands(){
         try{
-            String filename="src/ngoDemands.csv";
+            String filename="src/Documentation/ngoDemands.csv";
             FileWriter fw = new FileWriter(filename, true);
             fw.write("\n" + aids + " " + quantity );
             fw.close();

@@ -12,7 +12,16 @@ public class donorMenu {
     +"\n|------------------------------------------------------------|");
     
     System.out.println(menu);
+    int choice; 
+    switch (choice) {
+        case value:
+            
+            break;
+    
+        case
+            break;
    }
-
+   }
+   
 
 }
