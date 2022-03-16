@@ -33,28 +33,41 @@ public class LoginSystem {
         sc = new Scanner(System.in);
     
         ArrayList<String> credentials = readCredsFromFile(flag);
-    
+        for(int i = 0; i<credentials.size();i++)
+        {
+            System.out.println(credentials.get(i));
+        }
         System.out.println("Enter Name:");
         String tempname=sc.nextLine();
         System.out.println("Enter Password:");
         String temppassword=sc.nextLine();
-        
-        for (int i =0; i<credentials.size();i++){
-            if(credentials.get(i).equals(tempname+" "+temppassword)) {
+        boolean check=false;
+
+        for (int i = 0; i<credentials.size();i++){
+            // System.out.println(credentials.get(i).equals(tempname+" "+temppassword));
+            check =credentials.get(i).equals(tempname+" "+temppassword);
+
+            if(check == true) {
                 String[] temp = credentials.get(i).split("\\s");
                 tempname=temp[0];
-                temppassword=temp[1];               
+                temppassword=temp[1];
+                System.out.println("im here-------");
+                if(flag==1){
+                    //directs to donor menu      
+                }
+                else if(flag==2){
+                    //directs to ngo menu
+                    ngoMenu.welcomeNgo(tempname);
+                }
+                break;               
             }
         }
-        
-        if(flag==1){
-                  //directs to donor menu      
-        }
-        else if(flag==2){
-                  //directs to ngo menu
-            ngoMenu.welcomeNgo(tempname);
-        }
-                    
+        if(check==false){
+            System.out.println("---------------------------------------------");
+            System.out.println("Either the Name or the Password was wrong");
+            System.out.println("Try again");
+            authenticateUser(flag);
+        } 
     }
     //------------------------------------------------------------------------------------
 
