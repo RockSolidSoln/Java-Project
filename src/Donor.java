@@ -31,9 +31,9 @@ public class Donor{
     // this method will save all the information about a donor and will be used in a html report later on!
     public void saveDonorInfo(){
         try{
-            String path  = "src/DonorInfo.csv";
+            String path  = "src/Documentation/Donorinfo.csv";
             FileWriter fw = new FileWriter(path,true);
-            fw.write("\n"+ name + phoneNumber + itemName + quantity);
+            fw.write("\n"+ name +","+ phoneNumber+"," +itemName+"," + quantity);
             fw.close();
         }catch(IOException e){
             System.err.println("IOException" + e.getMessage());

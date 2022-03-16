@@ -33,10 +33,6 @@ public class LoginSystem {
         sc = new Scanner(System.in);
     
         ArrayList<String> credentials = readCredsFromFile(flag);
-        for(int i = 0; i<credentials.size();i++)
-        {
-            System.out.println(credentials.get(i));
-        }
         System.out.println("Enter Name:");
         String tempname=sc.nextLine();
         System.out.println("Enter Password:");
@@ -44,7 +40,6 @@ public class LoginSystem {
         boolean check=false;
 
         for (int i = 0; i<credentials.size();i++){
-            // System.out.println(credentials.get(i).equals(tempname+" "+temppassword));
             check =credentials.get(i).equals(tempname+" "+temppassword);
 
             if(check == true) {
@@ -53,7 +48,7 @@ public class LoginSystem {
                 temppassword=temp[1];
                 System.out.println("im here-------");
                 if(flag==1){
-                    //directs to donor menu      
+                    donorMenu.showDonormenu(tempname);     
                 }
                 else if(flag==2){
                     //directs to ngo menu

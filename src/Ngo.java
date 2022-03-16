@@ -21,7 +21,7 @@ public class Ngo {
         try{
             String filename="src/Documentation/ngoDemands.csv";
             FileWriter fw = new FileWriter(filename, true);
-            fw.write("\n" + aids + " " + quantity );
+            fw.write("\n" + aids +","+ quantity );
             fw.close();
         } catch(IOException ioe){
             System.err.println("IOException: " + ioe.getMessage());

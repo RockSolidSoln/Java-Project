@@ -18,14 +18,7 @@ public class ngoMenu {
         
         int choice = sc.nextInt();
         switch (choice) {
-            case (1):   System.out.println("Enter name of the aid");
-                        String amount=sc.nextLine();
-                        System.out.println("Enter the number of quantity");
-                        int qty=sc.nextInt();
-    
-                        Ngo set = new Ngo(amount, qty);
-    
-                        set.saveNgoDemands();
+            case (1):  enterRequiredAids(name);
     
                         break;
             case (2):   break;
@@ -35,5 +28,16 @@ public class ngoMenu {
         sc.close();
 
     }
+    public static void enterRequiredAids(String name){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name of the aid");
+        String amount=sc.nextLine();
+        System.out.println("Enter the number of quantity");
+        int qty=sc.nextInt();
 
+        Ngo set = new Ngo(amount, qty);
+
+        set.saveNgoDemands();
+        sc.close();
+    }
 }

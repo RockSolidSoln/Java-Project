@@ -9,7 +9,7 @@ public class start {
 
     private static void welcomeMenu() throws IOException{
         String menu =
-        "\n|------------------------------------------------------------|"
+         "\n|------------------------------------------------------------|"
         +"\n|           Welcome to our Aid Distribution System           |"
         +"\n|           To procced please choose an option below         |"
         +"\n|------------------------------------------------------------|"
