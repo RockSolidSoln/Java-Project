@@ -5,10 +5,10 @@ public class Donor{
     private String name;
     private String phoneNumber;
     private String itemName;
-    private int quantity;
+    private String quantity;
     public Donor(){};
 
-    public Donor(String name,String phoneNumber,String itemName, int qty){
+    public Donor(String name,String phoneNumber,String itemName, String qty){
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.itemName = itemName;
@@ -24,7 +24,7 @@ public class Donor{
     public String getItemName(){
         return itemName;
     }
-    public int getQuantity(){
+    public String getQuantity(){
         return quantity;
     }
 

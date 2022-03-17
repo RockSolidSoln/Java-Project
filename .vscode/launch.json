@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch donorMenu",
+      "request": "launch",
+      "mainClass": "donorMenu",
+      "projectName": "OOPDS_9d333053"
+    },
+    {
+      "type": "java",
       "name": "Launch start",
       "request": "launch",
       "mainClass": "start",
