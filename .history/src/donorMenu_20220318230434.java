@@ -8,7 +8,9 @@ import java.io.*;
 // import javax.swing.*;
 // import java.awt.event.*;
 
+
 public class donorMenu {
+
     //-------------------------------------Shows Donor Menu and re-routes to enter aids or view all aids donated.-----------------------------------------------------------------------//
     public static void showDonormenu(String name) throws IOException{
     Scanner sc = new Scanner(System.in);
@@ -48,7 +50,7 @@ public class donorMenu {
         Donor set = new Donor(name,itemName,quantity,"unsatisfied");
         set.saveDonorInfo();
         sc.close();
-        // showDonormenu(name);
+        showDonormenu(name);
     }
     //-------------------------------------------------------------------------------------------//
     
@@ -98,6 +100,28 @@ public class donorMenu {
             e.printStackTrace(); 
         }        
     }
+    //-------------------------------------------------------------------------------------------//
+    
+    //-------------------------------------------------------------------------------------------//
+    // public static void directBackDonor(String name) throws IOException{
+    //     System.out.println
+    //     ("\n|------------------------------------------------------------|"
+    //     +"\n                    Donor "+name+ "                             "
+    //     +"\n|------------------------------------------------------------|"
+    //     +"\n|   Enter 1: To go back to donor Menu                        |"
+    //     +"\n|   Enter 2: To logout                                       |"
+    //     +"\n|------------------------------------------------------------|");
+
+    //     int choice = 1;
+    //     if (choice == 1) {
+    //         showDonormenu(name);
+    //     }
+    //     else if (choice == 2) {
+    //         System.out.println
+    //             ("Thanks for putting your requests,"
+    //             +"\n It will be satisfied with in no Time.");
+    //     }
+    // }
     //-------------------------------------------------------------------------------------------//
     
 }

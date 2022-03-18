@@ -48,7 +48,7 @@ public class donorMenu {
         Donor set = new Donor(name,itemName,quantity,"unsatisfied");
         set.saveDonorInfo();
         sc.close();
-        // showDonormenu(name);
+        showDonormenu(name);
     }
     //-------------------------------------------------------------------------------------------//
     

@@ -47,7 +47,7 @@ public class ngoMenu {
         set.saveNgoDemands();
         sc.close();
         System.out.println("\nThe aids request was successfully sent to DC");
-        // welcomeNgo(name);
+        directBackNgo(name);
     }
     //-------------------------------------------------------------------------------------------//
 

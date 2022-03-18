@@ -8,6 +8,7 @@ import java.io.*;
 // import javax.swing.*;
 // import java.awt.event.*;
 
+
 public class donorMenu {
     //-------------------------------------Shows Donor Menu and re-routes to enter aids or view all aids donated.-----------------------------------------------------------------------//
     public static void showDonormenu(String name) throws IOException{
@@ -48,7 +49,7 @@ public class donorMenu {
         Donor set = new Donor(name,itemName,quantity,"unsatisfied");
         set.saveDonorInfo();
         sc.close();
-        // showDonormenu(name);
+        showDonormenu(name);
     }
     //-------------------------------------------------------------------------------------------//
     
