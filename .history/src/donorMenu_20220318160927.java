@@ -70,7 +70,6 @@ public class donorMenu {
                }
                System.out.println();
                input.close();
-               br.close();
            }
                 
            } catch (Exception e) {

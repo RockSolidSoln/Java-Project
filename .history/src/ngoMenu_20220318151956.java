@@ -53,7 +53,7 @@ public class ngoMenu {
         File file =  new File("src/Documentation/DonatedItems.csv");
         
         try{
-            Scanner input = new Scanner(file);  
+           Scanner input = new Scanner(file);  
             System.out.format("%-5s%15s%6s%10s%5s","Name","PhoneNumber","Aid","Quantity","Ngo"+"\n"); //template for the table.
             do{
                 String data = input.nextLine(); //reads data from csv file

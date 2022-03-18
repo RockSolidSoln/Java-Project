@@ -69,8 +69,7 @@ public class donorMenu {
                    System.out.printf("%-15s","   "+index);
                }
                System.out.println();
-               input.close();
-               br.close();
+               
            }
                 
            } catch (Exception e) {
