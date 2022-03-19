@@ -24,12 +24,14 @@ public class donorMenu {
     System.out.println(menu);
     int choice= sc.nextInt();
     switch (choice){
-        case(1):  enterAids(name); //re-routes to the enter aids method.
-                    break;
-        case(2):  showStatus(name);
+        case(1):     
+enterAids(name); //re-routes to the enter aids method.
+break;
+        case(2):   showStatus(name);
                     break;    
-        case(3):  viewAidsDonated(); //re-routes to view all aids donated.
-                    break;
+        case(3):
+            viewAidsDonated(); //re-routes to view all aids donated.
+            break;
     }
    sc.close();
    }
@@ -43,7 +45,7 @@ public class donorMenu {
         System.out.println("Please Enter How many items you want to donate");
         String quantity = sc.nextLine();
 
-        Donor set = new Donor(name,itemName,quantity);
+        Donor set = new Donor(name,itemName,quantity,"unsatisfied");
         set.saveDonorInfo();
         sc.close();
         // showDonormenu(name);

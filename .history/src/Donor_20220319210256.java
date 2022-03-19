@@ -8,7 +8,7 @@ public class Donor{
 
     public Donor(){};
 
-    public Donor(String name,String itemName, String qty){
+    public Donor(String name,String itemName, String qty, String status){
         this.name = name;
         this.itemName = itemName;
         this.quantity = qty;    

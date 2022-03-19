@@ -5,13 +5,15 @@ public class Donor{
     private String name;
     private String itemName;
     private String quantity;
+    private String status;
 
     public Donor(){};
 
-    public Donor(String name,String itemName, String qty){
+    public Donor(String name,String itemName, String qty, String status){
         this.name = name;
         this.itemName = itemName;
         this.quantity = qty;    
+        this.status = status;  
     }
     // each of the statements below will return a variable we will use on later.
     public String getName(){                    

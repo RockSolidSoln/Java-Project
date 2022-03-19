@@ -5,10 +5,11 @@ public class Donor{
     private String name;
     private String itemName;
     private String quantity;
+    private String status;
 
     public Donor(){};
 
-    public Donor(String name,String itemName, String qty){
+    public Donor(String name,String itemName, String qty, String status){
         this.name = name;
         this.itemName = itemName;
         this.quantity = qty;    
