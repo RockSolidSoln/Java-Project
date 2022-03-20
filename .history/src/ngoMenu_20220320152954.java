@@ -27,7 +27,7 @@ public class ngoMenu {
                         break;
             case(2):   showStatus(name);
                         break;
-            case (3):   showHistory.viewAidsHistory(name,1);
+            case (3):   viewAidsHistory(name);
                         break;
         }
         sc.close();
@@ -61,7 +61,7 @@ public class ngoMenu {
                 List<String> source = Arrays.asList(data.split(",")); //put data in a list and saves it
                 String list = Arrays.toString(source.toArray()).replace("[", "  ").replace("]", "  ").replace(",", "    "); //return to string without brackets or commas
                 
-                if (list.contains(name) && list.contains("unsatsified")){
+                if (list.contains(name) && list.contains("unsatsified"){
                     System.out.printf(list);
                 }
                 System.out.println();
@@ -72,7 +72,32 @@ public class ngoMenu {
             System.out.println("x");
         }
     }
-    //-------------------------------------------------------------------------------------------// 
+    //-------------------------------------------------------------------------------------------//
+
+    //--------------------------------------Allows the ngo to view all aids donated to them=----------------------------------------------------------------------------------------//
+    public static void viewAidsHistory(String name){
+        File file =  new File("src/Documentation/donor&NgoMatched.csv");
+        try{
+            Scanner input = new Scanner(file);  
+            System.out.format("%-5s%15s%6s%10s%5s","Name","PhoneNumber","Aid","Quantity","Ngo"+"\n"); //template for the table.
+            do{
+                String data = input.nextLine(); //reads data from csv file
+                List<String> source = Arrays.asList(data.split(",")); //put data in a list and saves it
+                String list = Arrays.toString(source.toArray()).replace("[", "  ").replace("]", "  ").replace(",", "    "); //return to string without brackets or commas
+                
+                if (list.contains(name) ){
+                    System.out.printf(list);
+                }
+                System.out.println();
+                
+            } while(input.hasNextLine());
+           input.close();  
+        }
+           catch (Exception e){
+                System.out.println("x");
+            }
+            
+    }
 }
 //------------------------------------------------------------------------------------------------//
 

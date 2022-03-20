@@ -16,9 +16,9 @@ public class donorMenu {
     ("\n|------------------------------------------------------------|"
     +"\n                Welcome Donor "+name+"                        "
     +"\n|------------------------------------------------------------|"
-    +"\n|     Enter 1: To Enter the aids to be donated               |"
-    +"\n|     Enter 2: To view all the aids donated to DC            |"
-    +"\n|     Enter 3: To view all the aids donated delivered to NGO |"
+    +"\n|      Enter 1: To Enter the aids to be donated              |"
+    +"\n|      Enter 2: To view the aids provided not used           |"
+    +"\n|      Enter 3: To View list of all aids donated             |"
     +"\n|------------------------------------------------------------|");
     
     System.out.println(menu);
@@ -28,7 +28,7 @@ public class donorMenu {
                     break;
         case(2):  showStatus(name);
                     break;    
-        case(3):  showHistory.viewAidsHistory(name,1); //re-routes to view all aids donated.
+        case(3):  viewAidsDonated(name); //re-routes to view all aids donated.
                     break;
     }
    sc.close();
@@ -71,8 +71,32 @@ public class donorMenu {
             System.out.println("x");
         }
     }
-    //-----------------------------------------------------------------------------------------------//            
-}
-//-------------------------------------------------------------------------------------------//
+    //-----------------------------------------------------------------------------------------------//
+
+    //--------------------------------------------Allows the user to view all aids donated-------------------------------------------------------------------------------------------//
+    private static void  viewAidsDonated(String name) throws IOException {
+        File file = new File("src/Documentation/donor&NgoMatched.csv");
+        String line = "";
+        
+        System.out.format("%8s%20s%9s%16s%13s","Name","PhoneNumber","Aid","Quantity","Ngo"+"\n");
+        try{
+           Scanner input = new Scanner(file);
+           BufferedReader br = new BufferedReader(new FileReader(file));
+           while((line = br.readLine()) !=null){
+               String[] row = line.split(",");
+
+               for (String index : row) {
+                   System.out.printf("%-15s","   "+index);
+               }
+               System.out.println();
+               input.close();
+               br.close();
+           } 
+        } catch (Exception e) {
+            e.printStackTrace(); 
+        }        
+    }
+    //-------------------------------------------------------------------------------------------//
     
+}
 

@@ -27,7 +27,7 @@ public class ngoMenu {
                         break;
             case(2):   showStatus(name);
                         break;
-            case (3):   showHistory.viewAidsHistory(name,1);
+            case (3):   showHistory.viewAidsHistory(name);
                         break;
         }
         sc.close();

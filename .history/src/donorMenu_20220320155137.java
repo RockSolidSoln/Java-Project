@@ -28,7 +28,7 @@ public class donorMenu {
                     break;
         case(2):  showStatus(name);
                     break;    
-        case(3):  showHistory.viewAidsHistory(name,1); //re-routes to view all aids donated.
+        case(3):  viewAidsDonated(name); //re-routes to view all aids donated.
                     break;
     }
    sc.close();
@@ -71,7 +71,8 @@ public class donorMenu {
             System.out.println("x");
         }
     }
-    //-----------------------------------------------------------------------------------------------//            
+    //-----------------------------------------------------------------------------------------------//
+            
 }
 //-------------------------------------------------------------------------------------------//
     
