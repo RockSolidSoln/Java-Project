@@ -6,12 +6,15 @@ import java.util.*;
 import java.io.*;
 public class matching {
     
-    public static void main(String[]args){
-        
+    public static void main(String[]args)throws IOException{
+        ArrayList<String> requiredaids = requiredaids();
+        for (int i =0; i<requiredaids.size();i++){
+            System.out.println(requiredaids.get(i));
+        }
     }  
     
     
-    private static ArrayList<String> required() throws IOException{
+    private static ArrayList<String> requiredaids() throws IOException{
         ArrayList<String> required = new ArrayList<>();
         List<String>lines = Files.readAllLines(Paths.get("src/Documentation/ngoDemands.csv"));
         for(int i =0; i<lines.size();i++){
@@ -21,7 +24,7 @@ public class matching {
             String quantityRequired = items[2];
             String status = items[3];
             required.add(ngoName+" "+aidRequired+" "+quantityRequired+ " "+ status);
-            System.out.println(required.get(i));
+
         }
         return required;
     }
