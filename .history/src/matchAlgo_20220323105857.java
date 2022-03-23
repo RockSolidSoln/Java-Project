@@ -5,7 +5,11 @@ public class matchAlgo extends matching {
                                ArrayList<Integer> dQty, ArrayList<String> nName,
                                ArrayList<String> nAids,ArrayList<Integer> nQty,
                                ArrayList<String> nStatus){
-        
+        ln("----------NqtY----------------");
+        for(int i = 0; i < nQty.size();i++){
+            System.out.print(nQty.get(i) + " "); 
+        }
+        System.out.println("----------NqtY----------------");
         for(int i =0; i< nName.size();i++){
 
             //sorting function in descending order based on Quantitiy According to Donor's list 

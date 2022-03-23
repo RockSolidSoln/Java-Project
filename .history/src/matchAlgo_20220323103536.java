@@ -6,13 +6,15 @@ public class matchAlgo extends matching {
                                ArrayList<String> nAids,ArrayList<Integer> nQty,
                                ArrayList<String> nStatus){
         
+                                Sy
+        for(int i=0;i<dQty.size();i++){
+            
+        }                        
         for(int i =0; i< nName.size();i++){
 
             //sorting function in descending order based on Quantitiy According to Donor's list 
             sorting.sortArray(dName, dAids, dQty);
-            if(dQty.get(0) == 0){
-                break; //that means all the elements inside dqty are 0. 
-            }
+
             //for 1-1 matching: since dQty(0) is the largest after sorting,
             //comparing if dQty(0) is enough
             if(nQty.get(i)<=dQty.get(0)){
@@ -22,20 +24,23 @@ public class matchAlgo extends matching {
             else{
                 int sum=0;
                 for(int j=0; j< dQty.size();j++){
-                    
-                    if(nQty.get(i)<=dQty.get(j)){
-                        dQty.set(j,dQty.get(j)-nQty.get(i)); 
+                    sum+=dQty.get(j);
+                    if(nQty.get(i)<=sum){
+                        dQty.set(j,sum-nQty.get(i)); 
                         nQty.set(i,0);      //Ngo request satisfied
                     }
                     else{
                         nQty.set(i,nQty.get(i)-dQty.get(j));
                         dQty.set(j,0);
-                        //System.out.println("nqty-"+nQty.get(i));
                         //now we will acknowledge donor name of j;
                     }
                 }
             }
-            
+            for(int j=0; j<dQty.size(); j++){
+                System.out.println("donor "+dQty.get(j));
+                System.out.println("ngo "+nQty.get(i));
+                System.out.println("------------");
+            }
             
         }
     }
