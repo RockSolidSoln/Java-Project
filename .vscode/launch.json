@@ -9,6 +9,20 @@
       "name": "Launch matching",
       "request": "launch",
       "mainClass": "matching",
+      "projectName": "OOPDS_7db6ff67"
+    },
+    {
+      "type": "java",
+      "name": "Launch temp",
+      "request": "launch",
+      "mainClass": "temp",
+      "projectName": "OOPDS_7db6ff67"
+    },
+    {
+      "type": "java",
+      "name": "Launch matching",
+      "request": "launch",
+      "mainClass": "matching",
       "projectName": "OOPDS_9d333053"
     },
     {
