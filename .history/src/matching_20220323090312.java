@@ -57,7 +57,7 @@ public class matching{
                 j++;
             }
         }
-        matchAlgo.runAlgo(fName, fAids, fQty, nName, nAids, nQty, nStatus);
+        matchAlgo.runAlgo();
         sc.close();  
     }  
     

@@ -33,10 +33,11 @@ public class matching{
                  nQty.add(Qty);
                  nStatus.add(temp[3]);
                  j++;
+                 System.out.println(nName.get(i));
              }
         }
         for(int i=0; i< nName.size();i++){
-            System.out.println(nName.get(i) + " " + nAids.get(i) + " " + nQty.get(i) + " " + nStatus.get(i));
+            System.out.println(nName.get(i) + " " );
         }
 
         System.out.println("Enter the name of the Ngo which requests you want to satisfy: ");
@@ -57,7 +58,6 @@ public class matching{
                 j++;
             }
         }
-        matchAlgo.runAlgo(fName, fAids, fQty, nName, nAids, nQty, nStatus);
         sc.close();  
     }  
     

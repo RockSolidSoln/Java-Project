@@ -5,7 +5,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.io.*;
 public class matching{  
-
     public static void main(String[]args) throws IOException{
         ArrayList<String> requiredaids = requiredaids();
         ArrayList<String> donatedaids = donatedaids();
@@ -23,10 +22,10 @@ public class matching{
         int j=0;
 
         for (int i =0; i<requiredaids.size();i++){
-             String[] temp = requiredaids.get(i).split("\\s");
+             String[] temp = donatedaids.get(i).split("\\s");
 
              String status = temp[3];
-             if (status.contains("unsatisfied")){
+             if (status.contains("unsatsified")){
                  nName.add(temp[0]);
                  nAids.add(temp[1]);
                  int Qty = Integer.parseInt(temp[2]);
@@ -35,13 +34,7 @@ public class matching{
                  j++;
              }
         }
-        for(int i=0; i< nName.size();i++){
-            System.out.println(nName.get(i) + " " + nAids.get(i) + " " + nQty.get(i) + " " + nStatus.get(i));
-        }
-
-        System.out.println("Enter the name of the Ngo which requests you want to satisfy: ");
-        String name = sc.nextLine();
-
+        String name = getNgoName(nName, N)
         j=0;
         for (int i =0; i<donatedaids.size();i++){
             //System.out.println(donatedaids.get(i));
@@ -57,7 +50,6 @@ public class matching{
                 j++;
             }
         }
-        matchAlgo.runAlgo(fName, fAids, fQty, nName, nAids, nQty, nStatus);
         sc.close();  
     }  
     
@@ -89,4 +81,15 @@ public class matching{
         }
         return required;
     }
+
+    public static String getNgoName(Arraylist<String> name, Arraylist<String> aids, Arraylist<int> qty, Arraylist<String> status){
+        for(int i=0; i<name.size();i++){
+            System.out.println(name.get(i) + " " + aids.get(i) + " " + qty.get(i) + " " + status(get(i)); 
+        }
+        System.out.println("Enter the name of the Ngo which requests you want to satisfy: ");
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        return name;
+    }
 }
+

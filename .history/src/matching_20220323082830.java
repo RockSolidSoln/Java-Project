@@ -26,19 +26,19 @@ public class matching{
              String[] temp = requiredaids.get(i).split("\\s");
 
              String status = temp[3];
-             if (status.contains("unsatisfied")){
+             if (status.contains("unsatsified")){
                  nName.add(temp[0]);
                  nAids.add(temp[1]);
                  int Qty = Integer.parseInt(temp[2]);
                  nQty.add(Qty);
                  nStatus.add(temp[3]);
                  j++;
+                 System.out.println(nName.get(i));
              }
         }
         for(int i=0; i< nName.size();i++){
-            System.out.println(nName.get(i) + " " + nAids.get(i) + " " + nQty.get(i) + " " + nStatus.get(i));
+            System.out.println(nName.get(i) + " " );
         }
-
         System.out.println("Enter the name of the Ngo which requests you want to satisfy: ");
         String name = sc.nextLine();
 
@@ -57,7 +57,6 @@ public class matching{
                 j++;
             }
         }
-        matchAlgo.runAlgo(fName, fAids, fQty, nName, nAids, nQty, nStatus);
         sc.close();  
     }  
     
