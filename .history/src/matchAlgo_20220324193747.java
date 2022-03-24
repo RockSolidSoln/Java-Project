@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-public class matchAlgo extends matching {
+public class MatchAlgo extends Matching {
     public static void runAlgo(String name, ArrayList<String> dName, 
                                 ArrayList<String> dAids ,ArrayList<Integer> dQty, 
                                 ArrayList<String> nName, ArrayList<String> nAids, 
@@ -52,7 +52,7 @@ public class matchAlgo extends matching {
                 // System.out.println(nAids.get(i)+" "+nQty.get(i)+" "+nStatus.get(i)); 
             }
         }
-        writeBack.updateDonor(dName, dAids, dQty,1);
+        WriteBack.updateDonor(dName, dAids, dQty,1);
         writeBack.updateNgo(nName, nAids, nQty, nStatus);
 
     }

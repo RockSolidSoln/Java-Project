@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Start",
+      "request": "launch",
+      "mainClass": "Start",
+      "projectName": "OOPDS_7db6ff67"
+    },
+    {
+      "type": "java",
       "name": "Launch matching",
       "request": "launch",
       "mainClass": "matching",
