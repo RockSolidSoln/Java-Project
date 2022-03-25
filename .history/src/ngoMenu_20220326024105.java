@@ -27,7 +27,6 @@ public class NgoMenu {
                         break;
         }
         DirectBackMenu.directBack(name,2);   //take user to direct back menu
-        sc.close();
     }
     //-------------------------------------------------------------------------------------------//
 

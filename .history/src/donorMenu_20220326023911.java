@@ -28,7 +28,7 @@ public class DonorMenu {
                     break;
     }
     DirectBackMenu.directBack(name,1);   //take user to direct back menu
-    sc.close();
+    sc.close()
     }
     //-------------------------------------------------------------------------------------------//
    

@@ -4,7 +4,8 @@ import java.util.*;
 //------------------This class contains the method to filter out Donated aids----------------------------------
 public class Matching extends MatchAlgorithm{  
     
-    private static Scanner sc = new Scanner(System.in);
+    prScanner sc = new Scanner(System.in);
+
     //------------------This method to filters out Donated aids and pass it all to match the requested aids-----------
     public static void filter() throws IOException{
         ArrayList<String> donatedaids = Donor.donatedaids();     //this takes the previous aids currently in the DC
