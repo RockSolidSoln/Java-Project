@@ -37,7 +37,7 @@ public class ShowHistory {
                    wrongName=1;    //if Donor/NGO not found in the file
                 }
             } while(input.hasNextLine());   //while the end of the file
-            if(wrongName==1 && found==false){
+            if(wrongName==1 && found=false){
                 System.out.printf("| %10s |%11s |%10s |%10s |%10s |%10s|","X","X","X","X","X","X");//prints the data
                 System.out.println("\n|------------------------------------------------------------------------|");
                 System.out.println("\n\nPlease enter the correct name");
