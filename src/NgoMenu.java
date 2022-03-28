@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**This class contains the methods for the NGO menu*/
-public class NgoMenu {
+public class NgoMenu extends Ngo{
 
     /**Initializing scanner*/
     private static final Scanner sc = new Scanner(System.in);

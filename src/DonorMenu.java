@@ -2,9 +2,9 @@ import java.util.*;
 import java.io.*;
 
 /**This class contains the methods for the Donor menu*/
-public class DonorMenu {
+public class DonorMenu extends Donor{
     /**Initializing scanner*/
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     /**Shows Donor Menu and re-routes to enter aids or view all aids donated*/
     public static void welcomeDonor(String name) throws IOException{ //takes the name of the Donor
     
