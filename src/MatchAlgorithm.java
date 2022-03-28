@@ -2,11 +2,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-//------------------This class contains the method to match the request ----------------------------------
+/**This class contains the method to match the request*/
 public class MatchAlgorithm {
 
-    //------------------This method handles the algorithm to match the request --------------------------------
-    public static void runAlgo(String name, ArrayList<String> dName,                //takes paramater of aids name, Donor's &
+    /**This method handles the algorithm to match the request*/
+    public static void runAlgo(String name, ArrayList<String> dName,                //takes parameter of aids names, Donor's &
                                 ArrayList<String> dAids ,ArrayList<Integer> dQty,   // and NGO's data in different ArrayLists
                                 ArrayList<String> nName, ArrayList<String> nAids, 
                                 ArrayList<Integer> nQty, ArrayList<String> nStatus) throws IOException{
@@ -15,7 +15,7 @@ public class MatchAlgorithm {
             //checks if name of the aids to satisfy is equals to aids in the ngo demands
             if(name.equals(nAids.get(i))){
 
-                //sorting function in descending order based on Quantitiy According to Donor's list 
+                //sorting function in descending order based on Quantity According to Donor's list
                 sortArray(dName, dAids, dQty);
 
                 if(dQty.get(0) == 0){
@@ -60,7 +60,7 @@ public class MatchAlgorithm {
     }
     //-------------------------------------------------------------------------------------------//
 
-    //------------------Thismethod to sorts out Donated aids in Descending order-----------------
+    /**This method to sorts out Donated aids in Descending order*/
     public static void sortArray(ArrayList<String> dName,ArrayList<String> dAids,
                                 ArrayList<Integer> dQty){   //takes Donors aids in different Arraylists 
         for(int i=0;i<dQty.size()-1;i++){

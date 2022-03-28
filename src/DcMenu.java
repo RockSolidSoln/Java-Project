@@ -1,23 +1,27 @@
 import java.util.*;
 import java.io.IOException;
 
-//------------------This class contains the method for DcMenu----------------------------------
+/**This class contains the methods for DcMenu*/
 public class DcMenu {
 
-    private static Scanner sc = new Scanner(System.in);
-    //------------------This method directs back the user----------------------------------------------
+    /**Initializing Scanner*/
+    private static final Scanner sc = new Scanner(System.in);
+
+    /**This method directs back the user*/
     public static void showDcMenu() throws IOException {
         System.out.println
-        ("\n|---------------------------------------------------------------|"
-        +"\n|               Welcome to Distribution Center                  |"
-        +"\n|---------------------------------------------------------------|"
-        +"\n|     Enter 1: To view all the aids available in DC             |"
-        +"\n|     Enter 2: To view all the NGO's demand                     |"
-        +"\n|     Enter 3: To match the aids available to NGO               |"
-        +"\n|     Enter 4: To view all the aids donated by specific Donor   |"
-        +"\n|     Enter 5: To view all the aids recieve by specific NGO     |"
-        +"\n|     Enter 6: To show the history of all the aids distributed  |"
-        +"\n|---------------------------------------------------------------|");
+        ("""
+
+                |---------------------------------------------------------------|
+                |               Welcome to Distribution Center                  |
+                |---------------------------------------------------------------|
+                |     Enter 1: To view all the aids available in DC             |
+                |     Enter 2: To view all the NGO's demand                     |
+                |     Enter 3: To match the aids available to NGO               |
+                |     Enter 4: To view all the aids donated by specific Donor   |
+                |     Enter 5: To view all the aids receive by specific NGO     |
+                |     Enter 6: To show the history of all the aids distributed  |
+                |---------------------------------------------------------------|""");
         
         int choice = sc.nextInt();      //takes the input from the user
 
@@ -42,10 +46,10 @@ public class DcMenu {
     }
     //-------------------------------------------------------------------------------------------//
 
-    //------------------This method is show the history according to the flag---------------------------
+    /**This method is show the history according to the flag*/
     public static void show(Scanner sc, int flag){          //takes flag and show the history according to the flag
         sc = new Scanner(System.in);
-        if(flag==0){    //if flag 0 show according to specific Donor/NGO
+        if(flag==0){                                    //if flag 0 show according to specific Donor/NGO
                 String str = sc.nextLine();            //takes the name of NGO/Donor
                 ShowHistory.viewAidsHistory(str,0);     //calls show history for method 
         }

@@ -1,11 +1,12 @@
 import java.util.*;
 import java.io.*;
 
-//------------------This class contains the methods for the NGO menu----------------------------------
+/**This class contains the methods for the NGO menu*/
 public class NgoMenu {
-    
-    private static Scanner sc = new Scanner(System.in);
-    //----------------Shows Ngo Menu and re routes the NGO-------------------------------------//
+
+    /**Initializing scanner*/
+    private static final Scanner sc = new Scanner(System.in);
+    /**Shows Ngo Menu and re-routes the NGO*/
     public static void welcomeNgo(String name) throws IOException {     //takes the name of the NGO
         
         System.out.println
@@ -19,7 +20,7 @@ public class NgoMenu {
 
         int choice = sc.nextInt();           //takes the NGO choice according to the menu
         switch (choice) {
-            case (1):   enterRequiredAids(sc, name);     //re-routes to the enter required aids
+            case (1):   enterRequiredAids(sc, name);     //re-routes to enter required aids
                         break;
             case(2):    showStatus(name,0);          //show requested aids 
                         break;  
@@ -31,7 +32,7 @@ public class NgoMenu {
     }
     //-------------------------------------------------------------------------------------------//
 
-    //----------------Allows the User to input required aids-------------------------------------//
+    /**This method Allows the User to input required aids*/
     public static void enterRequiredAids(Scanner sc, String name) throws IOException{   //takes the name of the NGO
         sc = new Scanner(System.in);
         System.out.println("-------------------------------------------------------------------");
@@ -53,9 +54,10 @@ public class NgoMenu {
     }
     //-------------------------------------------------------------------------------------------//
 
-    //-------------------------------------------------------------------------------------------//
+    /** This method show all the unsatisfied requests still in the system by NGO's*/
     public static void showStatus(String name, int flag){       // takes the name of the NGO and flag
         File file =  new File("src/Documentation/NgoDemands.csv");//stores the path of the file
+        boolean found = false ;     //to check if data to print is there in the files
         try{
             Scanner input = new Scanner(file); 
             System.out.println("\n|------------------------------------|");
@@ -66,18 +68,24 @@ public class NgoMenu {
                 List<String> source = Arrays.asList(data.split(",")); //put data in a list and saves it
                 String list = Arrays.toString(source.toArray()).replace("[", "  ").replace("]", "  ").replace(",", "    "); //return to string without brackets or commas
                 
-                if (list.contains(name) && list.contains("unsatisfied") && flag==0){    // if the list containes the name of the NGO
-                    String[] temp = list.split("\\s+");     //slpit the comma
+                if (list.contains(name) && list.contains("unsatisfied") && flag==0){    // if the list contains the name of the NGO
+                    String[] temp = list.split("\\s+");     //spit the comma
                     System.out.printf("| %10s |%11s |%10s|",temp[1],temp[2],temp[3]);   // print the data
                     System.out.println("\n|------------------------------------|");
+                    found = true;
                 }       
                 else if(flag==1){                             // if DC wants to check all the requested aids
                     String[] temp = list.split("\\s+");       // splits the comma
                     System.out.printf("| %10s |%11s |%10s|",temp[1],temp[2],temp[3]);   // print the data
                     System.out.println("\n|------------------------------------|");
+                    found = true;
                 }
-                
             } while(input.hasNextLine());   //while the end of the file
+            if(!found){
+                System.out.printf("| %10s |%11s |%10s |%10s |%10s |%10s|","X","X","X","X","X","X");//prints the data
+                System.out.println("\n|------------------------------------------------------------------------|");
+                System.out.println("\n\nThere is nothing to show in the system");
+            }
         //    input.close();  
         } catch (Exception e){              //if unable to read from the file
             System.out.println("-------------------------------------------------------------------");

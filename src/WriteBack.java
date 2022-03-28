@@ -5,10 +5,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-//------------This class containes methods to write back in the files---------------------------------
+/**This class containes methods to write back in the files*/
 public class WriteBack {
     
-    //------------------This method is store the tranactions---------------------------
+    /**This method is store the tranactions*/
     public static void store(String dName, String dAids ,int dQty, String nName) throws IOException{ //takes the Donors as well as NGO's info
 
         List<String> lines = Files.readAllLines(Paths.get("src/credentials/DonorCredentials.csv"));  //read from the file and store in the Strings list
@@ -46,7 +46,7 @@ public class WriteBack {
     }
     //-------------------------------------------------------------------------------------------//
     
-    //------------------This method is update the Donors aids---------------------------
+    /**This method is update the Donors aids*/
     public static void updateDonor(ArrayList<String> dName, ArrayList<String> dAids,
                                     ArrayList<Integer> dQty, int flag){     //takes the Donor's aids info and a flag
         String path  = "src/Documentation/DonatedItems.csv";                //stores the path of the file
@@ -78,7 +78,7 @@ public class WriteBack {
     }
     //-------------------------------------------------------------------------------------------//
 
-    //------------------This method is to update NGO requests---------------------------
+    /**This method is to update NGO requests*/
     public static void updateNgo(ArrayList<String> nName,
                                 ArrayList<String> nAids,ArrayList<Integer> nQty,
                                 ArrayList<String> nStatus){     //takes the NGO's aids data 

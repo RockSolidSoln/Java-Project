@@ -4,27 +4,30 @@ import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-//----------------This class contains the constructors and methods to enter Donor aids in the DC---------------
+/**This class contains the constructors and methods to enter Donor aids in the DC*/
 public class Donor{
-    private String name;        //name of the Donor
-    private String itemName;    //name of the aids
-    private int quantity;       //number of items
+    /**Name of the Donor*/
+    private String name;
+    /**Name of the aids*/
+    private String itemName;
+    /**Number of items*/
+    private int quantity;
 
-    //initializing name, itemName, quantity to null and 0 respectively by default
-    public Donor(){};
+    /**Initializing name, itemName, quantity to null and 0 respectively by default*/
+    public Donor(){}
 
-    //initializing name, itemName, quantity to what user passed while creating the Object
+    /**initializing name, itemName, quantity to what user passed while creating the Object*/
     public Donor(String name,String itemName, int qty){
         this.name = name;
         this.itemName = itemName;
         this.quantity = qty;    
     }
 
-    //------------This method will save all the aids donated by the donor---------------------------
+    /**This method will save all the aids donated by the donor*/
     public void saveDonorAids() throws IOException{
         ArrayList<String> data = donatedaids();     //this takes the previous aids currently in the DC
 
-        ArrayList<String> dName = new ArrayList<String>();      //ArrayList stores all the name 
+        ArrayList<String> dName = new ArrayList<String>();      //ArrayList stores all the name
         ArrayList<String> dAids = new ArrayList<String>();      //ArrayList stores all the aids names
         ArrayList<Integer> dQty = new ArrayList<Integer>();     //Arraylist stores all the quantity
         int flag=0;
@@ -53,7 +56,7 @@ public class Donor{
     }
     //-------------------------------------------------------------------------------------------//
 
-    //--------------This method returns the donated aids by all the donors----------------------//
+    /**This method returns the donated aids by all the donors*/
     public static ArrayList<String> donatedaids() throws IOException{
         ArrayList<String> previousAids= new ArrayList<>();     //to store all the donated aids lists
         List<String>lines = Files.readAllLines(Paths.get("src/Documentation/DonatedItems.csv"));

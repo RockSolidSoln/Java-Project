@@ -4,17 +4,21 @@ import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-//----------------This class contains the constructors and methods to enter NGO requests in the DC---------------
+/**This class contains the constructors and methods to enter NGO requests in the DC*/
 public class Ngo {
-    private String name;        //name of the NGO
-    private String aids;        //name of the aids
-    private int quantity;       //number of quantity
-    private String status;      //status of request
+    /**Name of the NGO*/
+    private String name;
+    /**Name of the NGO's requests aids*/
+    private String aids;
+    /**Quantity of the NGO's request*/
+    private int quantity;
+    /**Status of the NGO requests*/
+    private String status;
 
-    //initializing name, aids , status to null and quanitiy t0 0 by default
+    /**Initializing name, aids , status to null and quantity t0 0 by default*/
     public Ngo() {};
 
-    //initializing name, aids, quantity, status the values passed by the user while creating objects
+    /**Initializing name, aids, quantity, status the values passed by the user while creating objects*/
     public Ngo(String name, String aids, int q, String status) {
         this.name = name;
         this.aids = aids;
@@ -22,7 +26,7 @@ public class Ngo {
         this.status = status;
     }
     
-    //------------This method will save all the request by the donor---------------------------
+    /**This method will save all the request by the donor*/
     public void saveNgoDemands() throws IOException{
         ArrayList<String> data = requestedaids();        //this takes the previous aids requested currently in the DC
 
@@ -61,7 +65,7 @@ public class Ngo {
     }  
     //-------------------------------------------------------------------------------------------//
 
-    //--------------This method returns the requested aids by all the ngo----------------------//
+    /**This method returns the requested aids by all the ngo*/
     public static ArrayList<String> requestedaids() throws IOException{
         ArrayList<String> required = new ArrayList<>();     //to store all the requested aids lists
         List<String>lines = Files.readAllLines(Paths.get("src/Documentation/NgoDemands.csv"));
