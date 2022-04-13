@@ -37,7 +37,7 @@ public class WriteBack {
             System.out.println(" The transaction was successful ");
             System.out.println("\n|------------------------------------------------------------------------------------|");
             System.out.format("|%10s  |%11s |%10s |%10s |%10s |%10s |%10s|","Donor ","PhoneNumber","Aid","Quantity","Ngo","Manpower","Status"); //template for the table.
-            System.out.println("\n|------------------------------------------------------------------------------------|");
+            System.out.println("\n|-----------------------------------------------------------------------------------|");
             System.out.printf("| %10s |%11s |%10s |%10s |%10s |%10s |%10s|",dName, phono, dAids, dQty, nName, manpower,"Reserved");              //printinf each transaction
             System.out.println("\n|------------------------------------------------------------------------------------|");
         } catch(Exception e){       //if unable to write
