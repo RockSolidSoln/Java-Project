@@ -11,7 +11,7 @@ public class ShowHistory {
         try{
             Scanner input = new Scanner(file);  
             System.out.println("\n|------------------------------------------------------------------------|");
-            System.out.format("|%10s  |%11s |%10s |%10s |%10s |%10s |%10s|","Donor ","PhoneNumber","Aid","Quantity","Ngo","Manpower","Status"); //template for the table.
+            System.out.format("|%10s  |%11s |%10s |%10s |%10s |%10s|%10s|","Donor ","PhoneNumber","Aid","Quantity","Ngo","Manpower"); //template for the table.
             System.out.println("\n|------------------------------------------------------------------------|");
 
             do{
