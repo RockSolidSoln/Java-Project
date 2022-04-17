@@ -17,10 +17,11 @@ public class DcMenu {
                 |---------------------------------------------------------------|
                 |     Enter 1: To view all the aids available in DC             |
                 |     Enter 2: To view all the NGO's demand                     |
-                |     Enter 3: To match the aids available to NGO               |
-                |     Enter 4: To view all the aids donated by specific Donor   |
-                |     Enter 5: To view all the aids receive by specific NGO     |
-                |     Enter 6: To show the history of all the aids distributed  |
+                |     Enter 3: To Reserve the aids available for the NGO        |
+                |     Enter 4: To send Reserved aids to NGO                     |
+                |     Enter 5: To view all the aids donated by specific Donor   |
+                |     Enter 6: To view all the aids receive by specific NGO     |
+                |     Enter 7: To show the history of all the aids distributed  |
                 |---------------------------------------------------------------|""");
         
         int choice = sc.nextInt();      //takes the input from the user
@@ -32,13 +33,15 @@ public class DcMenu {
                         break;
             case 3:     Matching.filter();                      //run the matching algorithm
                         break;
-            case 4:     System.out.println("Please Enter the name of the Donor-");
+            case 4:     SimulationMenu.Simulation();
+                        break;
+            case 5:     System.out.println("Please Enter the name of the Donor-");
                         show(sc,0);                                //show the transaction for specific Donors
                         break;
-            case 5:     System.out.println("Please Enter the name of the NGO-");
+            case 6:     System.out.println("Please Enter the name of the NGO-");
                         show(sc,0);                                //show the transaction for specific NGO
                         break;
-            case 6:     show(sc,1);                                //show the transaction 
+            case 7:     show(sc,1);                                //show the transaction
                         break;
         }
         DirectBackMenu.directBack("null",3);        //Direct back menu for user to continue or exit

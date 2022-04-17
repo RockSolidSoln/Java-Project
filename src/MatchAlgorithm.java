@@ -29,6 +29,7 @@ public class MatchAlgorithm {
                     dQty.set(0,dQty.get(0)-nQty.get(i));    //subtracts the difference from donors aids
                     nQty.set(i,0);                          //make requested aids 0 after satisfaction
                     nStatus.set(i,"satisfied");             //set status as "satisfied"
+                    break;
                 }   
                 else{
                     for(int j=0; j< dQty.size();j++){

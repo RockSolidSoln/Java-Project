@@ -54,15 +54,14 @@ public class Matching extends MatchAlgorithm{
         System.out.println("-------------------------------------------------------------------");
 
         String name = sc.nextLine();        //takes the name of the aids
-        int flag=0;      
-
+        int flag=0;
         for (int i =0; i<donatedaids.size();i++){
             String[] temp = donatedaids.get(i).split("\\s+");   //split the array
 
             String aids = temp[1];
             int Qty = Integer.parseInt(temp[2]);                //converts the quantity to a number
 
-            if (aids.contains(name)){       //if aids matches the entered aid
+            if (aids.equals(name)){       //if aids matches the entered aid
                 dName.add(temp[0]);         //stores the name of the NGO
                 dAids.add(aids);            //stores the name of the aids
                 dQty.add(Qty);              //store the quantity
