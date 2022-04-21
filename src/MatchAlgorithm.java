@@ -25,7 +25,7 @@ public class MatchAlgorithm {
                 //comparing if dQty(0) is enough
                 if(nQty.get(i)<=dQty.get(0)){
                     //write back the transactions in the file 
-                    WriteBack.store(dName.get(i), dAids.get(i), nQty.get(i), nName.get(i), true);
+                    WriteBack.store(dName.get(i), dAids.get(i), nQty.get(i), nName.get(i));
                     dQty.set(0,dQty.get(0)-nQty.get(i));    //subtracts the difference from donors aids
                     nQty.set(i,0);                          //make requested aids 0 after satisfaction
                     nStatus.set(i,"satisfied");             //set status as "satisfied"
@@ -38,7 +38,7 @@ public class MatchAlgorithm {
                             dQty.set(j,dQty.get(j)-nQty.get(i)); //subtracts the difference from the donors aids
                             if(dQty.get(j)!=0){
                                 //write back the transactions in the file 
-                                WriteBack.store(dName.get(j), dAids.get(j), nQty.get(i), nName.get(i), true);
+                                WriteBack.store(dName.get(j), dAids.get(j), nQty.get(i), nName.get(i));
                             }
                             nQty.set(i,0);      //Ngo request satisfied
                             nStatus.set(i,"satisfied");     //set status as "satisfied"
@@ -46,7 +46,7 @@ public class MatchAlgorithm {
                         }
                         else{
                             //write back the transactions in the file 
-                            WriteBack.store(dName.get(j), dAids.get(j), dQty.get(j), nName.get(i), true);
+                            WriteBack.store(dName.get(j), dAids.get(j), dQty.get(j), nName.get(i));
                             nQty.set(i,nQty.get(i)-dQty.get(j));    //subtracts the difference from the requested aids
                             dQty.set(j,0);      //set the donor aids zero
                         }

@@ -31,7 +31,7 @@ public class Donor{
         ArrayList<String> dAids = new ArrayList<String>();      //ArrayList stores all the aids names
         ArrayList<Integer> dQty = new ArrayList<Integer>();     //Arraylist stores all the quantity
         int flag=0;
-        WriteBack.store(name, itemName, quantity, "--",true);
+        WriteBack.store(name, itemName, quantity, "--");
         for(int i=0; i<data.size(); i++){
             String[] temp = data.get(i).split("\\s");           //split the comma
 

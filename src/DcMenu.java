@@ -32,7 +32,6 @@ public class DcMenu {
             case 2:     NgoMenu.showStatus("null",1);           //show all the requested aids in the system
                         break;
             case 3:     Matching.filter();                      //run the matching algorithm
-                        WriteBack.updateDonorAndNgo();
                         break;
             case 4:     SimulationMenu.Simulation();
                         break;
