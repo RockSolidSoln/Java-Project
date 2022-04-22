@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SimulationMenu {
 
-    public static void Simulation() {
+    public static void Simulation() throws Exception {
         Scanner scanner = new Scanner(System.in);
         String menu =
                 """
@@ -17,9 +17,9 @@ public class SimulationMenu {
         System.out.println(menu);
         int choice = scanner.nextInt();
         switch (choice) {
-            case (1):
+            case (1):   QSimulator.startQSimulator();
                 break;
-            case (2):
+            case (2):   PqSimulator.startPqSimulator();
                 break;
         }
         scanner.close();

@@ -9,6 +9,27 @@
       "name": "Launch Start",
       "request": "launch",
       "mainClass": "Start",
+      "projectName": "OOPDS_6cee3107"
+    },
+    {
+      "type": "java",
+      "name": "Launch PqSimulator",
+      "request": "launch",
+      "mainClass": "PqSimulator",
+      "projectName": "OOPDS_6cee3107"
+    },
+    {
+      "type": "java",
+      "name": "Launch QSimulator",
+      "request": "launch",
+      "mainClass": "QSimulator",
+      "projectName": "OOPDS_6cee3107"
+    },
+    {
+      "type": "java",
+      "name": "Launch Start",
+      "request": "launch",
+      "mainClass": "Start",
       "projectName": "OOPDS_7db6ff67"
     },
     {
