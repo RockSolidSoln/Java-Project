@@ -4,7 +4,7 @@ import java.nio.file.*;
 public class QSimulator {
     public static void startQSimulator() throws Exception {
         
-        List<String> lines = Files.readAllLines(Paths.get("C:/Users/mrtsh/OneDrive/Documents/OOPDS/src/Documentation/Donor&NgoMatched.csv"));
+        List<String> lines = Files.readAllLines(Paths.get("src/Documentation/Donor&NgoMatched.csv"));
         
         
        // List <ngoqarrlisted> match = new ArrayList<ngomatched>();

@@ -6,7 +6,7 @@ public class DonorMenu extends Donor{
     /**Initializing scanner*/
     private static final Scanner sc = new Scanner(System.in);
     /**Shows Donor Menu and re-routes to enter aids or view all aids donated*/
-    public static void welcomeDonor(String name) throws IOException{ //takes the name of the Donor
+    public static void welcomeDonor(String name) throws Exception { //takes the name of the Donor
     
     String menu=
     ("\n|------------------------------------------------------------|"

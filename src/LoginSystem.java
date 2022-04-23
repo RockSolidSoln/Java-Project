@@ -7,7 +7,7 @@ public class LoginSystem {
     /**This method Checks Input username/password with credentials already stored in the system
      * and the Directs them to their specific menu
      */
-    public static void authenticateUser(Scanner sc, int flag) throws IOException{// flag is to check if user is Donor or Ngo
+    public static void authenticateUser(Scanner sc, int flag) throws Exception {// flag is to check if user is Donor or Ngo
         sc = new Scanner(System.in);
         ArrayList<String> credentials = Credentials.readCredsFromFile(flag);
         System.out.println("-------------------------------------------------------------------");

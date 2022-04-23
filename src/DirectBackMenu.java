@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DirectBackMenu{
     
     /**This method directs back the user to their menus*/
-    public static void directBack(String name,int flag) throws IOException{  //takes the name of the NGO
+    public static void directBack(String name,int flag) throws Exception {  //takes the name of the NGO
         Scanner sc = new Scanner(System.in);
         System.out.println("""
 

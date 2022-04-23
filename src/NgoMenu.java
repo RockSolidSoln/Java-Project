@@ -7,7 +7,7 @@ public class NgoMenu extends Ngo{
     /**Initializing scanner*/
     private static final Scanner sc = new Scanner(System.in);
     /**Shows Ngo Menu and re-routes the NGO*/
-    public static void welcomeNgo(String name) throws IOException {     //takes the name of the NGO
+    public static void welcomeNgo(String name) throws Exception {     //takes the name of the NGO
         
         System.out.println
         ("\n|------------------------------------------------------------|"

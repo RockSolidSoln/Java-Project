@@ -63,7 +63,7 @@ public class WriteBack {
             try( FileWriter fw = new FileWriter(path)){
                 fw.write(dName.get(0)+"," + dAids.get(0) + "," + dQty.get(0));  //stores the first data set in the first line
                 for(int i=1; i<dQty.size(); i++){
-                    fw.write("\n"+ dName.get(i) +"," + dAids.get(i) + "," + dQty.get(i));   //appends the data in each line
+                    fw.write(dName.get(i) +"," + dAids.get(i) + "," + dQty.get(i) + "\n");   //appends the data in each line
                 }
                 fw.close();             
             }catch(Exception e){    //if unable to write back
@@ -75,7 +75,7 @@ public class WriteBack {
             try( FileWriter fw = new FileWriter(path,true)){
                 for(int i=0; i<dQty.size(); i++){
                     if(dQty.get(i)!=0){     //do not append the 0 quantity values in the file
-                        fw.write("\n"+ dName.get(i) +"," + dAids.get(i) + "," + dQty.get(i));   //appends data
+                        fw.write(dName.get(i) +"," + dAids.get(i) + "," + dQty.get(i) + "\n");   //appends data
                     }
                 }
                 fw.close();
@@ -93,13 +93,10 @@ public class WriteBack {
         try{
             String path  = "src/Documentation/NgoDemands.csv";  //stores the path of the file
             FileWriter fw = new FileWriter(path);
-            if(nStatus.get(0).equals("unsatisfied")){
-                fw.write(nName.get(0) +","+ nAids.get(0)+ "," + nQty.get(0)+","+ nStatus.get(0));   //appends the data
-            }      //truncate the file and write in the first line
 
             for(int i = 1; i < nStatus.size();i++){
                 if(nStatus.get(i).equals("unsatisfied")){       //only append the unsatisfied requests
-                    fw.write("\n"+ nName.get(i) +","+ nAids.get(i)+ "," + nQty.get(i)+","+ nStatus.get(i)); //appends the data
+                    fw.write(nName.get(i) +","+ nAids.get(i)+ "," + nQty.get(i)+","+ nStatus.get(i) + "\n"); //appends the data
                 }
             }
             fw.close();

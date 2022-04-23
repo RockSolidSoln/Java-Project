@@ -6,7 +6,7 @@ public class PqSimulator{
     public static void startPqSimulator() throws Exception  {
         System.out.println("This is the PriorityQ simulator.");
 
-        List<String> lines = Files.readAllLines(Paths.get("C:/Users/mrtsh/OneDrive/Documents/OOPDS/src/Documentation/Donor&NgoMatched.csv"));
+        List<String> lines = Files.readAllLines(Paths.get("src/Documentation/Donor&NgoMatched.csv"));
             
         ArrayList<NgoClass> ngoarr = new ArrayList<NgoClass>();
         Map<String, Integer> map = new HashMap<String, Integer>();
@@ -29,10 +29,10 @@ public class PqSimulator{
        // System.out.println(map.get("N1"));  // the name of the ngo and the manpower is stored in the map.
 
         //------STORING the NGO NAMES-----------------------------------------
-        ArrayList<String> allNgos = new ArrayList<String>(); 
-        for(int i = 0; i < ngoarr.size(); i++){
-            if(!ngoarr.get(i).ngoName.equals("0"))
-                allNgos.add(ngoarr.get(i).ngoName); 
+        ArrayList<String> allNgos = new ArrayList<String>();
+        for (NgoClass ngoClass : ngoarr) {
+            if (!ngoClass.ngoName.equals("0"))
+                allNgos.add(ngoClass.ngoName);
         }
         //---------------------------------------------------------------------
 

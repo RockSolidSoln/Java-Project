@@ -8,7 +8,7 @@ public class DcMenu {
     private static final Scanner sc = new Scanner(System.in);
 
     /**This method directs back the user*/
-    public static void showDcMenu() throws IOException {
+    public static void showDcMenu() throws Exception {
         System.out.println
         ("""
 
@@ -34,6 +34,7 @@ public class DcMenu {
             case 3:     Matching.filter();                      //run the matching algorithm
                         break;
             case 4:     SimulationMenu.Simulation();
+                        WriteBack.updateDonorAndNgo();
                         break;
             case 5:     System.out.println("Please Enter the name of the Donor-");
                         show(sc,0);                                //show the transaction for specific Donors

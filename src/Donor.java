@@ -32,16 +32,16 @@ public class Donor{
         ArrayList<Integer> dQty = new ArrayList<Integer>();     //Arraylist stores all the quantity
         int flag=0;
         WriteBack.store(name, itemName, quantity, "0", false);
-        for(int i=0; i<data.size(); i++){
-            String[] temp = data.get(i).split("\\s");           //split the comma
+        for (String datum : data) {
+            String[] temp = datum.split("\\s");           //split the comma
 
             String nameDonor = temp[0];                         //stores the name of the donor
             String aids = temp[1];                              //stores the aids donated by the donor
             int qty = Integer.parseInt(temp[2]);                //stores the quantity of aids donated convert it to integer
             //if donor name and aids already exists in the file
-            if(nameDonor.equals(name) && aids.equals(itemName)){
+            if (nameDonor.equals(name) && aids.equals(itemName)) {
                 qty += quantity;            //increase the number of quantity
-                flag=1;                     //to mark that donor aids already exists
+                flag = 1;                     //to mark that donor aids already exists
             }
 
             dName.add(nameDonor);           //appends the name of the donor
