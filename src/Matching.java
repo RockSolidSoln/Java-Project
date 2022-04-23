@@ -28,17 +28,17 @@ public class Matching extends MatchAlgorithm{
         ArrayList<Integer> nQty = new ArrayList<Integer>();
         ArrayList<String> nStatus = new ArrayList<String>();
 
-        for (int i =0; i<requiredaids.size();i++){
-             String[] temp = requiredaids.get(i).split("\\s");  //split by spaces
+        for (String requiredaid : requiredaids) {
+            String[] temp = requiredaid.split("\\s");  //split by spaces
 
-             String status = temp[3];       //stores the status of the aids in NGO
-             if (status.contains("unsatisfied")){   //if status is "unsatisfied"
-                 nName.add(temp[0]);        //stores the name of the NGO 
-                 nAids.add(temp[1]);        //stores the aids name
-                 int Qty = Integer.parseInt(temp[2]);   //converts the quality of the aids to Integer
-                 nQty.add(Qty);             //stores the quality of the aids
-                 nStatus.add(temp[3]);      //stores the status of the aids
-             }
+            String status = temp[3];       //stores the status of the aids in NGO
+            if (status.contains("unsatisfied")) {   //if status is "unsatisfied"
+                nName.add(temp[0]);        //stores the name of the NGO
+                nAids.add(temp[1]);        //stores the aids name
+                int Qty = Integer.parseInt(temp[2]);   //converts the quality of the aids to Integer
+                nQty.add(Qty);             //stores the quality of the aids
+                nStatus.add(temp[3]);      //stores the status of the aids
+            }
         }
         System.out.println("\n|------------------------------------|");
         System.out.format("|%10s  |%11s |%10s|","Name ","Aid","Quantity"); //template for the table.
@@ -55,19 +55,18 @@ public class Matching extends MatchAlgorithm{
 
         String name = sc.nextLine();        //takes the name of the aids
         int flag=0;
-        for (int i =0; i<donatedaids.size();i++){
-            String[] temp = donatedaids.get(i).split("\\s+");   //split the array
+        for (String donatedaid : donatedaids) {
+            String[] temp = donatedaid.split("\\s+");   //split the array
 
             String aids = temp[1];
             int Qty = Integer.parseInt(temp[2]);                //converts the quantity to a number
 
-            if (aids.equals(name)){       //if aids matches the entered aid
+            if (aids.equals(name)) {       //if aids matches the entered aid
                 dName.add(temp[0]);         //stores the name of the NGO
                 dAids.add(aids);            //stores the name of the aids
                 dQty.add(Qty);              //store the quantity
-                flag=1;                     //to check if at least one aid is available in the aids list
-            }
-            else{                           //else if the aid requested doesn't match in the list
+                flag = 1;                     //to check if at least one aid is available in the aids list
+            } else {                           //else if the aid requested doesn't match in the list
                 fName.add(temp[0]);         //stores the name of the NGO
                 fAids.add(aids);            //stores the name of the aids
                 fQty.add(Qty);              //store the quantity of the aids

@@ -35,6 +35,7 @@ public class WriteBack {
         }
 
         String path  = "src/Documentation/Donor&NgoMatched.csv";    //stores the path of the file
+
         try (FileWriter fw = new FileWriter(path,true)){       //appending at the end of each data
             fw.write(dName + "," + phono + ","
                     + dAids + "," + dQty + ","
@@ -61,8 +62,7 @@ public class WriteBack {
         if(flag==0){    
             //if flag 0 means do not truncate the array and re-write it again
             try( FileWriter fw = new FileWriter(path)){
-                fw.write(dName.get(0)+"," + dAids.get(0) + "," + dQty.get(0));  //stores the first data set in the first line
-                for(int i=1; i<dQty.size(); i++){
+                for(int i=0; i<dQty.size(); i++){
                     fw.write(dName.get(i) +"," + dAids.get(i) + "," + dQty.get(i) + "\n");   //appends the data in each line
                 }
                 fw.close();             

@@ -11,19 +11,12 @@ public class PqSimulator{
         ArrayList<NgoClass> ngoarr = new ArrayList<NgoClass>();
         Map<String, Integer> map = new HashMap<String, Integer>();
 
+        ShowHistory.viewAidsHistory("null",1);
 
         for(int i = 0; i < lines.size();i++) {
             String[] things = lines.get(i).split(",");
             NgoClass data1 = new NgoClass(things[0], things[1], things[2], things[3], things[4], Integer.parseInt(things[5]), things[6]);
             ngoarr.add(data1);
-            if(ngoarr.get(i).ngoMan != 0)
-                System.out.println (ngoarr.get(i).dName + " " + ngoarr.get(i).dPhone + " " + ngoarr.get(i).aidType 
-                                + " " + ngoarr.get(i).aidQty + " " + ngoarr.get(i).ngoName + " " +
-                                ngoarr.get(i).ngoMan + " " + ngoarr.get(i).status);            
-            else
-                System.out.println (ngoarr.get(i).dName + " " + ngoarr.get(i).dPhone + " " + ngoarr.get(i).aidType 
-                    + " " + ngoarr.get(i).aidQty + " " + " - - " + ngoarr.get(i).status);
-            
             map.put(ngoarr.get(i).ngoName, ngoarr.get(i).ngoMan);
         }
        // System.out.println(map.get("N1"));  // the name of the ngo and the manpower is stored in the map.
@@ -71,7 +64,8 @@ public class PqSimulator{
                         String nowname = pq.poll().ngoName;
                     //  pq.remove();
                         System.out.println(nowname);
-                        QAfterDeque.updatefiledq(ngoarr, nowname);
+                        String path = "src/Documentation/AfterPq.csv";
+                        QAfterDeque.updatefiledq(path, ngoarr, nowname, 3);
                     } 
                     else{
                         System.out.println("The queue is already empty. Make sure to enquue first.");

@@ -32,9 +32,9 @@ public class DcMenu {
             case 2:     NgoMenu.showStatus("null",1);           //show all the requested aids in the system
                         break;
             case 3:     Matching.filter();                      //run the matching algorithm
+                        WriteBack.updateDonorAndNgo();
                         break;
             case 4:     SimulationMenu.Simulation();
-                        WriteBack.updateDonorAndNgo();
                         break;
             case 5:     System.out.println("Please Enter the name of the Donor-");
                         show(sc,0);                                //show the transaction for specific Donors
@@ -45,8 +45,7 @@ public class DcMenu {
             case 7:     show(sc,1);                                //show the transaction
                         break;
         }
-        DirectBackMenu.directBack("null",3);        //Direct back menu for user to continue or exit
-        sc.close(); 
+        sc.close();
     }
     //-------------------------------------------------------------------------------------------//
 

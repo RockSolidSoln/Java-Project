@@ -8,18 +8,14 @@ public class QSimulator {
         
         
        // List <ngoqarrlisted> match = new ArrayList<ngomatched>();
-       ArrayList<NgoClass> qarrlist = new ArrayList<NgoClass>(); 
+       ArrayList<NgoClass> qarrlist = new ArrayList<NgoClass>();
+       ShowHistory.viewAidsHistory("null",1);
+
        for(int i = 0; i < lines.size();i++) {
             String[] things = lines.get(i).split(",");
             NgoClass data1 = new NgoClass(things[0], things[1], things[2], things[3], things[4], Integer.parseInt(things[5]), things[6]);
             qarrlist.add(data1);
-            if(qarrlist.get(i).ngoMan != 0)
-                System.out.println (qarrlist.get(i).dName + " " + qarrlist.get(i).dPhone + " " + qarrlist.get(i).aidType 
-                                + " " + qarrlist.get(i).aidQty + " " + qarrlist.get(i).ngoName + " " +
-                                qarrlist.get(i).ngoMan + " " + qarrlist.get(i).status);  
-            else
-                System.out.println (qarrlist.get(i).dName + " " + qarrlist.get(i).dPhone + " " + qarrlist.get(i).aidType 
-                                + " " + qarrlist.get(i).aidQty + " " + " - "+ " - " + qarrlist.get(i).status);
+
         }
 
         //------STORING the NGO NAMES-----------------------------------------
@@ -59,7 +55,8 @@ public class QSimulator {
                     if(queue.size() > 0){
                         String nowname = queue.remove();
                         System.out.println(nowname);
-                        QAfterDeque.updatefiledq(qarrlist, nowname);
+                        String path = "src/Documentation/AfterQ.csv";
+                        QAfterDeque.updatefiledq(path, qarrlist, nowname, 2);
                     }
                     else 
                         System.out.println("The Queue is already empty. Enqueue any Ngo first.");  
