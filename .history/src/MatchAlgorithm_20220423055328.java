@@ -25,7 +25,7 @@ public class MatchAlgorithm {
                 //comparing if dQty(0) is enough
                 if(nQty.get(i)<=dQty.get(0)){
                     //write back the transactions in the file 
-                    WriteBack.store(dName.get(i), dAids.get(i), nQty.get(i), nName.get(i), true);
+                    WriteBack.store(dName.get(i), dAids.get(i), nQty.get(i), nName.get(i));
                     dQty.set(0,dQty.get(0)-nQty.get(i));    //subtracts the difference from donors aids
                     nQty.set(i,0);                          //make requested aids 0 after satisfaction
                     nStatus.set(i,"satisfied");             //set status as "satisfied"

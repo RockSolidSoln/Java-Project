@@ -28,7 +28,7 @@ public class WriteBack {
             String[] items = line.split(",");       //split according to the comma
             if (nName.equals(items[0])) {     //if name of the NGO matches in Credentials file
                 manpower = items[2];        //stores the Manpower
-            } else if (nName.equals("0")) {
+            } else if (nName.equals("--")) {
                 manpower = nName;
                 status = "Available";
             }
