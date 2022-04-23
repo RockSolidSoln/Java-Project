@@ -1,0 +1,5 @@
+must-
+    add throws for every Exception
+    add comments(java documentation)
+how or what-
+    javaFX

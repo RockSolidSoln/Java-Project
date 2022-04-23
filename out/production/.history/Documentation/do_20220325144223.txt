@@ -1,0 +1,6 @@
+must-
+    add throws for every Exception
+    system should not break after any choice
+    add comments(java documentation)
+how or what-
+    javaFX
