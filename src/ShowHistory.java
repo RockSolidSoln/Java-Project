@@ -6,11 +6,26 @@ public class ShowHistory {
 
     /**This method is to print the matched aids history*/
     public static void viewAidsHistory(String name,int flag){   //takes input of history to be shown according to name or not
-        File file =  new File("src/Documentation/Donor&NgoMatched.csv");    //open the file according to the path
+
+        String path;
+        if(flag==2){
+            path = "src/Documentation/AfterQ.csv";
+            flag=1;
+        }
+        else if (flag==3){
+            path = "src/Documentation/AfterPq.csv";
+            flag=1;
+        }
+        else{
+           path = "src/Documentation/Donor&NgoMatched.csv";
+        }
+
+        File file =  new File(path);    //open the file according to the path
+
         boolean found = false;      //to check if data to print is there in the files
         try{
             Scanner input = new Scanner(file);  
-            System.out.println("\n|-----------------------------------------------------------------------------------|");
+            System.out.println("\n|------------------------------------------------------------------------------------|");
             System.out.format("|%10s  |%11s |%10s |%10s |%10s |%10s |%10s|","Donor ","PhoneNumber","Aid","Quantity","Ngo","Manpower","Status"); //template for the table.
             System.out.println("\n|------------------------------------------------------------------------------------|");
 
@@ -27,6 +42,10 @@ public class ShowHistory {
                 }
                 else if(flag==1){
                     String[] temp = list.split("\\s+");     //split according to the spaces
+                    if(temp[5].equals("0")){
+                        temp[4] = "-";
+                        temp[5] = "-";
+                    }
                     System.out.printf("| %10s |%11s |%10s |%10s |%10s |%10s |%10s|",temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6]);//prints the data
                     System.out.print("\n|------------------------------------------------------------------------------------|\n");
                     found = true;

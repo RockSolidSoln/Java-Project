@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DirectBackMenu{
     
     /**This method directs back the user to their menus*/
-    public static void directBack(String name,int flag) throws IOException{  //takes the name of the NGO
+    public static void directBack(String name,int flag) throws Exception {  //takes the name of the NGO
         Scanner sc = new Scanner(System.in);
         System.out.println("""
 
@@ -20,9 +20,6 @@ public class DirectBackMenu{
         }
         else if(choice == 1 && flag==2){        //if choice is 1 and user is NGO
             NgoMenu.welcomeNgo(name);           //directs NGO back to menu
-        }
-        else if(choice == 1 && flag==3){       //if choice is 1 and user is DC
-            DcMenu.showDcMenu();               //directs back to DC menu
         }
         else{
             System.exit(0); //if choice not 1 

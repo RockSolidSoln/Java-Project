@@ -1,0 +1,7 @@
+must-
+    add throws for every Exception
+    add comments(java documentation)
+    follow java naming conventions
+how or what-
+    do something to Credentials.java
+    javaFX

@@ -7,7 +7,7 @@ public class NgoMenu extends Ngo{
     /**Initializing scanner*/
     private static final Scanner sc = new Scanner(System.in);
     /**Shows Ngo Menu and re-routes the NGO*/
-    public static void welcomeNgo(String name) throws IOException {     //takes the name of the NGO
+    public static void welcomeNgo(String name) throws Exception {     //takes the name of the NGO
         
         System.out.println
         ("\n|------------------------------------------------------------|"
@@ -34,7 +34,7 @@ public class NgoMenu extends Ngo{
 
     /**This method Allows the User to input required aids*/
     public static void enterRequiredAids(Scanner sc, String name) throws IOException{   //takes the name of the NGO
-        sc = new Scanner(System.in);
+        sc  = new Scanner(System.in);
         System.out.println("-------------------------------------------------------------------");
         System.out.println("Enter name of the aid");
         String amount=sc.nextLine();                // takes the aid to be requested

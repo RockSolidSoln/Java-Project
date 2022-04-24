@@ -1,0 +1,5 @@
+tabular format
+add exception if user already exists in login System
+add throws for every Exception
+
+

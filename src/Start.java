@@ -13,7 +13,7 @@ public class Start {
     /**
      * This function takes user input and directs them to next command
      */
-    public static void main(String[] args) throws IOException{ 
+    public static void main(String[] args) throws Exception {
         String menu =
                 """
 

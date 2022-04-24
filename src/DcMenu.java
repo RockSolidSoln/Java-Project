@@ -8,7 +8,7 @@ public class DcMenu {
     private static final Scanner sc = new Scanner(System.in);
 
     /**This method directs back the user*/
-    public static void showDcMenu() throws IOException {
+    public static void showDcMenu() throws Exception {
         System.out.println
         ("""
 
@@ -32,6 +32,7 @@ public class DcMenu {
             case 2:     NgoMenu.showStatus("null",1);           //show all the requested aids in the system
                         break;
             case 3:     Matching.filter();                      //run the matching algorithm
+                        WriteBack.updateDonorAndNgo();
                         break;
             case 4:     SimulationMenu.Simulation();
                         break;
@@ -44,8 +45,7 @@ public class DcMenu {
             case 7:     show(sc,1);                                //show the transaction
                         break;
         }
-        DirectBackMenu.directBack("null",3);        //Direct back menu for user to continue or exit
-        sc.close(); 
+        sc.close();
     }
     //-------------------------------------------------------------------------------------------//
 

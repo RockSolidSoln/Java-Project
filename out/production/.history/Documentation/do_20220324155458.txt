@@ -1,0 +1,3 @@
+add exception if no aids available
+tabular format
+add exception if user already exists in login System
