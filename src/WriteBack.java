@@ -105,6 +105,8 @@ public class WriteBack {
         }  
     }
     //-------------------------------------------------------------------------------------------//
+
+    /**This method is to update Donor&NGOmatched file*/
     public static void updateDonorAndNgo(){
         try{
             String path= "src/Documentation/Donor&NgoMatched.csv";
