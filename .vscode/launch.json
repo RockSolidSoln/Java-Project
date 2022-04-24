@@ -9,6 +9,20 @@
       "name": "Launch Start",
       "request": "launch",
       "mainClass": "Start",
+      "projectName": "OOPDS_9d333053"
+    },
+    {
+      "type": "java",
+      "name": "Launch Gui",
+      "request": "launch",
+      "mainClass": "Gui",
+      "projectName": "OOPDS_9d333053"
+    },
+    {
+      "type": "java",
+      "name": "Launch Start",
+      "request": "launch",
+      "mainClass": "Start",
       "projectName": "OOPDS_7db6ff67"
     },
     {
