@@ -1,4 +1,0 @@
-add man power and phone number
-
-filtering out same donors and Aids
-add else for exception handling in matching

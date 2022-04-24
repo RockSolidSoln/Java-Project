@@ -1,5 +1,0 @@
-must-
-    add throws for every Exception
-    system should not break after any choice
-how or what-
-    javaFX

@@ -8,7 +8,8 @@ public class MatchedClass{
     int ngoMan; 
     String status; 
     
-    /**This method stores the data in specific identifiers*/
+    /**parameterized constructor to specify Donors name, phone number, aid type, aid quantity,
+     *  NGO name, Manpower and the NGO's collection status*/
     MatchedClass(String dName, String dPhone, String aidType, String aidQty, String ngoName, int ngoMan, String status){
         this.dName = dName;
         this.dPhone = dPhone;
