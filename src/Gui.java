@@ -44,10 +44,9 @@ public class Gui extends JFrame{
             {
                 try {
                     DonorMenu.enterAids(sc, "D1");
-                    
-                    
+                    System.exit(0);
                 } catch (IOException e1) {
-                
+                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }     
                 
