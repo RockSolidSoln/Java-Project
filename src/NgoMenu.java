@@ -20,7 +20,7 @@ public class NgoMenu extends Ngo{
 
         int choice = sc.nextInt();           //takes the NGO choice according to the menu
         switch (choice) {
-            case (1):   enterRequiredAids(sc, name);     //re-routes to enter required aids
+            case (1):   enterRequiredAids(name);     //re-routes to enter required aids
                         break;
             case(2):    showStatus(name,0);          //show requested aids 
                         break;  
@@ -33,8 +33,8 @@ public class NgoMenu extends Ngo{
     //-------------------------------------------------------------------------------------------//
 
     /**This method Allows the User to input required aids*/
-    public static void enterRequiredAids(Scanner sc, String name) throws IOException{   //takes the name of the NGO
-        sc = new Scanner(System.in);
+    public static void enterRequiredAids(String name) throws IOException{   //takes the name of the NGO
+        Scanner sc  = new Scanner(System.in);
         System.out.println("-------------------------------------------------------------------");
         System.out.println("Enter name of the aid");
         String amount=sc.nextLine();                // takes the aid to be requested
@@ -49,7 +49,7 @@ public class NgoMenu extends Ngo{
         }
         else{                                       //else ask the NGO to try again
             System.out.println("Quantity cannot be 0 or less"+"\nPlease try again");
-            enterRequiredAids(sc, name);                // re-routes the NGO to try again
+            enterRequiredAids(name);                // re-routes the NGO to try again
         }
     }
     //-------------------------------------------------------------------------------------------//

@@ -31,6 +31,7 @@ public class LoginSystem {
                 }
                 else if(flag==2){
                     NgoMenu.welcomeNgo(tempname);       //directs the NGO to Ngo menu
+
                 }
                 break;
             }
