@@ -8,15 +8,15 @@ public class ShowHistory {
     public static void viewAidsHistory(String name,int flag){   //takes input of history to be shown according to name or not
 
         String path;
-        if(flag==2){
+        if(flag==2){    //if flag 2 means path is for FIFO queue file
             path = "src/Documentation/AfterQ.csv";
             flag=1;
         }
-        else if (flag==3){
+        else if (flag==3){  //if flag 3 means path is for Priority queue file
             path = "src/Documentation/AfterPq.csv";
             flag=1;
         }
-        else{
+        else{   //else path for Donor&NgoMatched
            path = "src/Documentation/Donor&NgoMatched.csv";
         }
 

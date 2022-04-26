@@ -1,5 +1,0 @@
-tabular format
-add throws for every Exception
-
-
-javaFX??????

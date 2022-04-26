@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
+/**This class contains the menu to call the Simulation Methods*/
 public class SimulationMenu {
 
+    /**This method asks the user to select from the two Simulation modes*/
     public static void Simulation() throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Initializing a new scanner for taking input. 
         String menu =
                 """
                         |------------------------------------------------------------|
@@ -14,14 +16,14 @@ public class SimulationMenu {
                         |     Enter 2:  Priority mode                                |
                         |------------------------------------------------------------|""";
 
-        System.out.println(menu);
-        int choice = scanner.nextInt();
+        System.out.println(menu);  
+        int choice = scanner.nextInt(); //taking input for the choice of the type of the simulation
         switch (choice) {
-            case (1):   QSimulator.startQSimulator();
+            case (1):   QSimulator.startQSimulator();   //calls the FIFO queue mode of simulation
                 break;
-            case (2):   PqSimulator.startPqSimulator();
+            case (2):   PqSimulator.startPqSimulator(); //calls the Priority queue  mode of simulation
                 break;
         }
-        scanner.close();
+        scanner.close(); // closing the scanner. 
     }
 }
