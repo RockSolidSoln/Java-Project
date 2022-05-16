@@ -1,6 +1,0 @@
-must-
-    add throws for every Exception
-    add comments(java documentation)
-how or waht-
-do something to Credentials.java
-javaFX
