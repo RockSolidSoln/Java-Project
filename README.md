@@ -10,7 +10,7 @@ Ngo can request certain items from Distribution Center.
 Besides these option you can also start as a Distribution Center where you can match their aids.
 The aids are marked as Available, Reserved and Collected accordingly.
 
-The files have all the comments to help you through the code, and besides that there is a html folder which shows the Java documentation.
+The files have all the comments which shows the Java documentation.
 
 
 **Prefered Java and Javac version- "17.0.2"**
